@@ -44,3 +44,4 @@ pnpm add --save flowbite flowbite-react
 * https://flowbite.com/docs/getting-started/react/
 * https://flowbite.com/docs/getting-started/quickstart/#typescript
 * https://flowbite.com/docs/getting-started/typescript/
+* https://www.flowbite-react.com/
