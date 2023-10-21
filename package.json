@@ -13,6 +13,7 @@
   "dependencies": {
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.6.4",
+    "lucide-preact": "^0.288.0",
     "preact": "^10.16.0",
     "react": "npm:@preact/compat@^17.1.2",
     "react-dom": "npm:@preact/compat@^17.1.2"
