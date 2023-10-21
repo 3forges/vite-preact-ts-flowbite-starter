@@ -13,6 +13,7 @@ export const MainLayout = ({children}: MainLayoutProps ) => {
 
     return (
         <>
+
         <NavBar />
         {//children
         }
