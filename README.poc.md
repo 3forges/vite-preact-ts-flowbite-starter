@@ -34,6 +34,10 @@ cat ./src/index.addon.css | tee ./src/index.css
 cat ./src/index.previous.css | tee -a ./src/index.css
 
 pnpm add --save flowbite flowbite-react
+pnpm add --save flowbite flowbite-react
+pnpm add @reduxjs/toolkit
+pnpm add react-redux
+pnpm add axios
 
 
 ```
