@@ -24,9 +24,7 @@ interface UpdateProps {
  */
 export function UpdateProject(props: UpdateProps): JSX.Element {
   const dispatch = useAppDispatch()
-  const [modalValues, setModalValues] = useState<string>(
-    JSON.stringify(props.data),
-  )
+  const [modalValues, setModalValues] = useState(JSON.stringify(props.data))
 
   return (
     <div>
@@ -35,7 +33,7 @@ export function UpdateProject(props: UpdateProps): JSX.Element {
         rows={5}
         cols={80}
         value={modalValues}
-        onChange={(e) => setModalValues(e.target.value)}
+        onChange={(e: any) => setModalValues(e.target.value)}
         onKeyDown={async (e) => {
           // ENTER TO VALID UPDATE
           if (e.key === "Enter") {

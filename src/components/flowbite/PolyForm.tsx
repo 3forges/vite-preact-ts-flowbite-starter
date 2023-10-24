@@ -57,7 +57,9 @@ export function PolyForm(props: Form): JSX.Element {
             </div>
           )
         })}
+        <div class="grid grid-cols-2 gap-1 ">
         {props.mode && props.mode === "modal" && (
+          
           <Button
             className="button"
             onClick={() => {
@@ -66,6 +68,7 @@ export function PolyForm(props: Form): JSX.Element {
           >
             CANCEL
           </Button>
+         
         )}
         
         {props.mode && props.mode === "modal" && (
@@ -88,16 +91,16 @@ export function PolyForm(props: Form): JSX.Element {
               }
               console.log("data: ", data)
               await dispatch(UpdateProjectById(data))
-              setInputValue(randomProject())
               dispatch(RequestProjectList())
             }}
           >
           UPDATE
           </Button>
         ) || (
+          <>
+          <div></div>
           <Button
             type="submit"
-
             onClick={async () => {
               const name: any = document.getElementById("newname")
               const desc: any = document.getElementById("newdescription")
@@ -114,8 +117,10 @@ export function PolyForm(props: Form): JSX.Element {
           >
           NEW PROJECT
           </Button>
+          </>
         )
-        }      
+        }    
+        </div>  
         </div>
 
     </>

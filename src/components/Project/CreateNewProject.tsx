@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useAppDispatch } from "../../app/hooks"
 import {
   RequestProjectList,
-  PestoProjectApiEntity,
   CreateProject,
 } from "../../features/PestoApi/Projects/pestoProjectSlice"
 import { randomProject } from "../../features/PestoApi/Projects/randomProject" // DEVMODE USEFULL
@@ -13,9 +12,7 @@ import "./project.css"
  * @returns RANDOM|EDITED PestoProjectApiEntity
  */
 export function CreateNewProject(): JSX.Element {
-  const [inputValue, setInputValue] = useState<PestoProjectApiEntity>(
-    randomProject(),
-  )
+  const [inputValue, setInputValue] = useState(randomProject())
   const dispatch = useAppDispatch()
 
   return (
@@ -27,7 +24,7 @@ export function CreateNewProject(): JSX.Element {
           cols={50}
           rows={5}
           value={JSON.stringify(inputValue)}
-          onChange={(e) => setInputValue(JSON.parse(e.target.value))}
+          onChange={(e: any) => setInputValue(JSON.parse(e.target.value))}
         />
       </div>
       <button

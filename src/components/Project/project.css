@@ -3,7 +3,8 @@
   font-size: 14px;
   border: solid 0px blue;
   padding: 0px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
+  z-index: 0;
 }
 .ProjectCard ul {
   font-size: 16px;
@@ -52,7 +53,7 @@
   border: solid 5px #535353;
   position: absolute;
   transform: translate(-15px, 10px);
-  z-index: 1;
+  z-index: 10;
   display: none;
   padding: 10px;
   padding-top: 20px;

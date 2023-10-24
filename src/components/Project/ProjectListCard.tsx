@@ -4,6 +4,7 @@ import {
   PestoProjectApiEntity,
   DeleteProjectById,
 } from "../../features/PestoApi/Projects/pestoProjectSlice"
+import { Button } from "flowbite-react"
 
 interface ListProps {
   json: object | PestoProjectApiEntity
@@ -41,26 +42,24 @@ export function ProjectListCard(props: ListProps): JSX.Element {
       </ul>
       {/* CONTROLBAR IF CALLBACK PROVIDED */}
       {typeof props.callback != "undefined" && (
-        <div className="controlBar">
+        <div class="grid grid-cols-2 gap-2 z-0">
           <button
-            className="button"
-            aria-label="Edit"
-            onClick={() => {
+              className="button"
+              onClick={() => {
               props.callback() //modal(index)
+              setTimeout("document.body.click()", 1000)
             }}
           >
             Edit
           </button>
-          <button
-            className="button"
-            aria-label="Edit"
+          <Button
             onClick={async () => {
               await dispatch(DeleteProjectById(item._id))
               dispatch(RequestProjectList())
             }}
           >
             Remove
-          </button>
+          </Button>
         </div>
       )}
     </div>

@@ -5,13 +5,11 @@ import {
   PestoProjectApiEntity,
   request_Output,
 } from "../features/PestoApi/Projects/pestoProjectSlice"
-import { CreateNewProject } from "../components/Project/CreateNewProject"
 import { PolyForm } from "../components/flowbite/PolyForm"
-import { UpdateProject } from "../components/Project/UpdateProject"
 import { ProjectListCard } from "../components/Project/ProjectListCard"
 import { Feedbacks } from "../components/Feedbacks"
-import "../components/Project/project.css"
 import { Dropdown, Button, TextInput } from "flowbite-react"
+import "../components/Project/project.css"
 
 interface Filter {
   target: number
@@ -118,7 +116,7 @@ export function PestoProjectUI(): JSX.Element {
       <PolyForm />
       <hr style="margin:10px"/>
       {/* ----------------------FILTRE------------------- */}
-      <div className="flex max-w-md flex-row gap-4">
+      <div className="flex max-w-md flex-row gap-4 m-4">
         <Dropdown
           style="min-width: 160px"
           id="FilterDropdown"
