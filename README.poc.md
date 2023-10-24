@@ -38,7 +38,9 @@ pnpm add --save flowbite flowbite-react
 pnpm add @reduxjs/toolkit
 pnpm add react-redux
 pnpm add axios
-
+cat << EOF>> ./src/vite-env.d.ts
+declare module 'react';
+EOF
 
 ```
 
