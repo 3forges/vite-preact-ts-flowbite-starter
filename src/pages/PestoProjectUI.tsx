@@ -171,6 +171,14 @@ export function PestoProjectUI(): JSX.Element {
                   className="modal"
                   style={{ display: `${modalDisplay[index]}` }}
                 >
+                  <PolyForm
+                    project={item}
+                    mode="modal"
+                    callback={() => {
+                      modal(index)
+                    }}
+                  />
+                  {/*
                   <UpdateProject
                     data={item}
                     mode="modal"
@@ -178,6 +186,7 @@ export function PestoProjectUI(): JSX.Element {
                       modal(index)
                     }}
                   />
+                  */}
                 </div>
                 {/* WITHOUT MODAL: <div> <UpdateProject data={item} /> </div> */}
 
